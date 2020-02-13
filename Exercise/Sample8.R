@@ -17,3 +17,6 @@ exam %>% summarise(mean(math))
 exam[c(3,8,15),"math"]<-NA
   exam[seq(1,5,by=2)]
 exam[seq(1,12,by=3),]
+
+exam$math <- ifelse(is.na(exam$math),55,exam$math)
+mean(exam$math)
